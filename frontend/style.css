@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 18;
+    height: 97vh;
+    font-family: roboto;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: #00A8F3;
+    width: 35%;
+    height: 12%;
+    color: white;
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin-left: 1%;
+    margin-top: 1%;
+    border-radius: 20px;
+}
+
+
+.header p{
+    text-align: center;
+    padding: 4.5%;
+}
+
+.svgArea{
+    display: flex;
+    width: 80%;
+    margin-top: 1%;
+    margin-left: 1%;
+    background-color: #0066ff18;
+    border-radius: 20px;
+}
+
+.svg-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.svg-text span{
+    margin-top: 5%;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.span1{
+    margin-left: 15%;
+}
+
+.span2{
+    margin-right: 8%;
+}
+
+.span3{
+    margin-right: 32%;
+} 
+
+.bottom{
+    display: flex;
+}
+
+.small{
+    font-size: 1rem;
+    text-align: center;
+    width: 25%;
+    margin-left: 1rem;
+}
+
+.small p{
+    padding: 6%;
+}
+
+.instructions{
+    width: 50%;
+}
+
+ul{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    list-style: none;
+}
+
+ul li::before{
+    content: "\2022";
+    color: #00A8F3;
+    font-weight: bold;
+    display: inline-block;
+    width: 0.5em; 
+    font-size: 1.5em;
+}
+
+li{
+    margin-top: 1%;
+}
+
+.inputArea{
+    width: 50%;
+}
+
+.inputArea .textarea{
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: 20px;
+    padding: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.527);
+}
+
+.submit{
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    width: 6rem;
+    height: 2rem;
+    background-color: #0066FF;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.slider-label{
+    margin-left: 10rem;
+    margin-right: 1rem;
+}
+
+.slider{
+    margin-top: 1.5rem;
+}
+
+#num {
+    width: 17%;
+    display: flex;
+    margin-left: 27.2rem;
+    justify-content: space-between;
+}
+
+/* for index 2 */
+
+.Passage{
+    width: 30%;
+}

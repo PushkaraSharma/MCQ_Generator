@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mcq generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <p>GENERATE MCQ'S FROM TEXT</p>
+    </div>
+
+    <div class="svgArea">
+
+        <div class="svg-text">
+            <img src="./assets/input_data.svg" alt="input data" class="svg"><span class="span1">ENTER YOUR
+                DESIRED
+                TEXT</span>
+        </div>
+
+        <img src="./assets/arrow.svg" alt="arrow">
+
+        <div class="svg-text">
+            <img src="./assets/ai.svg" alt="input data" class="svg"><span class="span2">LET THE A.I. WORK
+                IT'S
+                MAGIC</span>
+        </div>
+
+        <img src="./assets/arrow.svg" alt="arrow">
+
+        <div class="svg-text">
+            <img src="./assets/Get mcq group.svg" alt="input data" class="svg"><span class="span3">GET
+                AUTOMATICALLY GENERATED MCQ'S</span>
+        </div>
+
+    </div>
+
+    <div class="bottom">
+
+        <div class="instructions">
+            <div class="header small">
+                <p>INSTRUCTIONS</p>
+            </div>
+            <ul>
+                <li>et quas molestias excepturi sint occaecati cupiditate non provident</li>
+                <li>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                    impedit quo minus id quod maxime placeat facere possimus, omnis
+                    voluptas assumenda est, omnis dolor repellendus.</li>
+                <li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.</li>
+                <li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.</li>
+            </ul>
+        </div>
+
+
+        <div class="inputArea">
+            <div class="header small">
+                <p>ENTER TEXT</p>
+            </div>
+            <textarea rows="13" cols="80" class='textarea'></textarea>
+            <br>
+            <button class="submit">SUBMIT</button>
+            <label for="slider" class="slider-label">No. of questions : </label>
+            <input type="range" min="1" max="6" value="4" class="slider" name="slider" list="num">
+            <datalist id="num">
+                <option value="1" label="1">
+                <option value="2" label="2">
+                <option value="3" label="3">
+                <option value="4" label="4">
+                <option value="5" label="5">
+                <option value="6" label="6">
+            </datalist>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
