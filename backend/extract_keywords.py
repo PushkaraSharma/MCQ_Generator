@@ -35,14 +35,14 @@ def final_keywords(text):
         if i.lower() in generated_summary.lower():
             filtered_keywords.append(i)
     print("Keywords from summary :",filtered_keywords)
-    return filtered_keywords
+    return filtered_keywords,generated_summary
 
 
 
-f = open('article.txt','r')
-text = f.read()
-f.close()
-keywords = final_keywords(text)
+# f = open('article.txt','r')
+# text = f.read()
+# f.close()
+# keywords,summary= final_keywords(text)
 # these keywords will be used to extract sentences from summary text then blank will
 #be given at this keyword place then will use wordnet to get more similar words to give 
 # options

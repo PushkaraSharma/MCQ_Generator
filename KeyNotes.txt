@@ -1,0 +1,8 @@
+# Working report from Pushkara
+Running good with article 2 , moderate with article 3 , but cant able to detect with article 1
+So need to handle these detection error with some sorry wanot able to make MCQ's template.
+
+Done with the sentence extraction for mcq, now only related option thingn is remaining from my side.
+
+# Working Report from Subhankar
+
