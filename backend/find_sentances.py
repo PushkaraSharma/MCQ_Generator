@@ -18,7 +18,8 @@ def set_sentances(text):
     return sentences
 
 
-def extract_sentences(keywords,text):
+def extract_sentences(text):
+    keywords,text = final_keywords(text)
     key_processor = KeywordProcessor()
     filtered_sentences = {}
     
@@ -35,10 +36,11 @@ def extract_sentences(keywords,text):
         keyword_searched = key_processor.extract_keywords(sent)
         for key in keyword_searched:
             filtered_sentences[key].append(sent)
+    filtered_sentences = dict([(key,val) for key,val in filtered_sentences.items() if(val)])
     
     #sorting with longest sentence of given keyword on top
     for i in filtered_sentences.keys():
-        values = filtered_sentences[i]
+        values = filtered_sentences[i]            
         values = sorted(values,key=len,reverse=True)
         filtered_sentences[i] = values
         
@@ -46,9 +48,9 @@ def extract_sentences(keywords,text):
     return filtered_sentences
     
     
-with open('article3.txt','r') as f:
-    text = f.read()
+# with open('article3.txt','r') as f:
+#     text = f.read()
     
     
-keywords,summary_text = final_keywords(text)       
-extract_sentences(keywords, summary_text)
+       
+# extract_sentences(text)

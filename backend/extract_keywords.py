@@ -36,6 +36,7 @@ def final_keywords(text):
             filtered_keywords.append(i)
     print("Keywords from summary :",filtered_keywords)
     return filtered_keywords,generated_summary
+    #return keywords_from_fulltext,text
 
 
 
