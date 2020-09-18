@@ -25,18 +25,20 @@ def extracting_keywords(text):
         keywords.append(i[0])
     return keywords
 
-def final_keywords(text):
+def final_keywords(text,quantity):
     
     keywords_from_fulltext = extracting_keywords(text)
-    print("Keywords from full text :",keywords_from_fulltext)
-    generated_summary = Summary(text)
-    filtered_keywords = []
-    for i in keywords_from_fulltext:
-        if i.lower() in generated_summary.lower():
-            filtered_keywords.append(i)
-    print("Keywords from summary :",filtered_keywords)
-    return filtered_keywords,generated_summary
-    #return keywords_from_fulltext,text
+   # print("Keywords from full text :",keywords_from_fulltext)
+    if(quantity=='low'):
+        generated_summary = Summary(text)
+        filtered_keywords = []
+        for i in keywords_from_fulltext:
+            if i.lower() in generated_summary.lower():
+                filtered_keywords.append(i)
+        print("Keywords from summary :",filtered_keywords)
+        return filtered_keywords,generated_summary
+    else:
+        return keywords_from_fulltext,text
 
 
 

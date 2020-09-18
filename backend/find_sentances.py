@@ -18,8 +18,8 @@ def set_sentances(text):
     return sentences
 
 
-def extract_sentences(text):
-    keywords,text = final_keywords(text)
+def extract_sentences(text,quantity):
+    keywords,text = final_keywords(text,quantity)
     key_processor = KeywordProcessor()
     filtered_sentences = {}
     
