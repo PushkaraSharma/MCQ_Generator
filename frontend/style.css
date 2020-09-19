@@ -3,88 +3,113 @@
     padding: 0;
 }
 body{
-    font-size: 18;
-    height: 97vh;
+    height: 100vh;
     font-family: roboto;
-    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.top{
+    background-color: #0066ff18;
+    margin: 1vh 2vh;
+    height: 50%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .header{
     background-color: #00A8F3;
-    width: 35%;
-    height: 12%;
+    width: 25%;
+    height: 18%;
+    border-radius: 20px;
+    font-weight: bolder;
     color: white;
-    font-size: 2.1rem;
-    font-weight: bold;
-    margin-left: 1%;
-    margin-top: 1%;
-    border-radius: 20px;
+    display: flex;    
+    flex-direction: column;     
+    justify-content: center;    
+    align-items: center; 
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-size: 1.5rem;
+
 }
 
-
-.header p{
-    text-align: center;
-    padding: 4.5%;
-}
-
-.svgArea{
+.svg-area{
     display: flex;
-    width: 80%;
-    margin-top: 1%;
-    margin-left: 1%;
-    background-color: #0066ff18;
-    border-radius: 20px;
+    justify-content: space-around;
+    width: 90%;
+    margin-right: 4%;
 }
 
 .svg-text{
     display: flex;
     flex-direction: column;
-}
-
-.svg-text span{
-    margin-top: 5%;
+    align-items: center;
     text-align: center;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
-.span1{
-    margin-left: 15%;
+.svg-text img{
+    margin-bottom: 1rem;
 }
 
-.span2{
-    margin-right: 8%;
+.arrow{
+    margin-bottom: 15%;
 }
 
-.span3{
-    margin-right: 32%;
-} 
+.svg3{
+    padding-top: 1.3%;
+}
 
 .bottom{
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* flex-wrap: wrap; */
 }
 
-.small{
-    font-size: 1rem;
-    text-align: center;
-    width: 25%;
-    margin-left: 1rem;
-}
-
-.small p{
-    padding: 6%;
+.inputArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .instructions{
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-ul{
-    margin-top: 1rem;
-    margin-left: 2rem;
+.sub{
+    width: 35%;
+    margin-bottom: 2%;
+}
+
+textarea{
+    margin-left: 2%;
+    border-radius: 20px;
+    padding: 1%;
+    border: 2px solid rgba(0, 0, 0, 0.527);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.submit{
+    width: 20%;
+    height: 10%;
+    background-color: #0066FF;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.instructions ul{
     list-style: none;
+    margin-left: 7%;
 }
 
-ul li::before{
+.instructions ul li::before{
     content: "\2022";
     color: #00A8F3;
     font-weight: bold;
@@ -93,51 +118,62 @@ ul li::before{
     font-size: 1.5em;
 }
 
-li{
+.output{
+    margin-top: 1%; 
+    margin-left: 2%;
+}
+
+.oSub{
+    width: 15%;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.questions{
     margin-top: 1%;
-}
-
-.inputArea{
-    width: 50%;
-}
-
-.inputArea .textarea{
-    margin-left: 1rem;
-    margin-top: 1rem;
-    border-radius: 20px;
-    padding: 1rem;
-    border: 2px solid rgba(0, 0, 0, 0.527);
-}
-
-.submit{
-    margin-left: 2rem;
-    margin-top: 0.5rem;
-    width: 6rem;
-    height: 2rem;
-    background-color: #0066FF;
-    color: white;
-    border: none;
-    font-size: 1.1rem;
-}
-
-.slider-label{
-    margin-left: 10rem;
-    margin-right: 1rem;
-}
-
-.slider{
-    margin-top: 1.5rem;
-}
-
-#num {
-    width: 17%;
+    margin-left: 2.5%;
     display: flex;
-    margin-left: 27.2rem;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-/* for index 2 */
+.question{
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+}
 
-.Passage{
-    width: 30%;
+.bold{
+    font-weight: bolder;
+}
+
+.question ul{
+    list-style: none;
+    display: flex;
+}
+
+.question ul li{
+    margin-right: 1%;
+}
+
+
+.question ul li::before{
+    content: "\2022";
+    color: #00A8F3;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #0066FF; 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

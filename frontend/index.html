@@ -7,42 +7,56 @@
     <title>Mcq generator</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="header">
-        <p>GENERATE MCQ'S FROM TEXT</p>
-    </div>
 
-    <div class="svgArea">
+    <div class="top">
 
-        <div class="svg-text">
-            <img src="./assets/input_data.svg" alt="input data" class="svg"><span class="span1">ENTER YOUR
-                DESIRED
-                TEXT</span>
+        <div class="header">
+            <p>GENERATE MCQ'S FROM TEXT</p>
         </div>
 
-        <img src="./assets/arrow.svg" alt="arrow">
+        <div class="svg-area">
 
-        <div class="svg-text">
-            <img src="./assets/ai.svg" alt="input data" class="svg"><span class="span2">LET THE A.I. WORK
-                IT'S
-                MAGIC</span>
-        </div>
+            <div class="svg-text">
+                <img src="./assets/input_data.svg" alt="input data" class="svg">
+                <span class="span1">ENTER YOUR DESIRED TEXT</span>
+            </div>
 
-        <img src="./assets/arrow.svg" alt="arrow">
+            <img src="./assets/arrow.svg" alt="arrow" class="arrow">
 
-        <div class="svg-text">
-            <img src="./assets/Get mcq group.svg" alt="input data" class="svg"><span class="span3">GET
-                AUTOMATICALLY GENERATED MCQ'S</span>
+            <div class="svg-text">
+                <img src="./assets/ai.svg" alt="input data" class="svg">
+                <span class="span2">LET THE A.I.<br>WORK IT'S MAGIC</span>
+            </div>
+
+            <img src="./assets/arrow.svg" alt="arrow" class="arrow">
+
+            <div class="svg-text svg3">
+                <img src="./assets/Get mcq group.svg" alt="input data" class="svg">
+                <span class="span3">GET AUTOMATICALLY<br>GENERATED MCQ'S</span>
+            </div>
         </div>
 
     </div>
 
     <div class="bottom">
 
+        <div class="inputArea">
+
+            <div class="header sub">
+                <p>ENTER TEXT</p>
+            </div>
+            <textarea rows="13" cols="80" class='textarea'></textarea>
+            <br>
+            <button class="submit">SUBMIT</button>
+            <div class="loader" style="display:none;"></div>
+        </div>
+
         <div class="instructions">
-            <div class="header small">
+            <div class="header sub">
                 <p>INSTRUCTIONS</p>
             </div>
             <ul>
@@ -55,28 +69,14 @@
             </ul>
         </div>
 
-
-        <div class="inputArea">
-            <div class="header small">
-                <p>ENTER TEXT</p>
-            </div>
-            <textarea rows="13" cols="80" class='textarea'></textarea>
-            <br>
-            <button class="submit">SUBMIT</button>
-            <label for="slider" class="slider-label">No. of questions : </label>
-            <input type="range" min="1" max="6" value="4" class="slider" name="slider" list="num">
-            <datalist id="num">
-                <option value="1" label="1">
-                <option value="2" label="2">
-                <option value="3" label="3">
-                <option value="4" label="4">
-                <option value="5" label="5">
-                <option value="6" label="6">
-            </datalist>
-        </div>
-
     </div>
 
+
+    <div class="output" style="display: none;"></div>
+
+    <script src="script.js" type="text/javascript"></script>
+
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, facilis exercitationem dignissimos sunt veniam numquam eum expedita, impedit ipsa veritatis tempore necessitatibus reprehenderit dolore voluptatibus illo nulla quis a suscipit harum cupiditate fuga nisi possimus. Sunt minima animi, numquam voluptatibus laudantium rem. Commodi nostrum eaque vero nobis at, consequatur illo atque maiores officiis rem ratione dignissimos porro quasi, aut repellendus nisi facere. Laborum voluptas nemo expedita a consequatur sunt ipsum, est veritatis ab sed asperiores dignissimos facilis sint repellat cupiditate! Nisi, architecto ullam aperiam necessitatibus numquam fugit consequatur? Atque nostrum, et, nesciunt suscipit sequi voluptatibus perferendis nisi quae, sed repellendus mollitia reprehenderit hic dolorum officia eum laboriosam quo beatae! Et vel voluptas repudiandae, esse eius praesentium nostrum, tenetur ab, architecto necessitatibus earum debitis inventore placeat sint quod eligendi dolore ea id ratione sapiente cumque? Repudiandae officiis saepe illo ratione aperiam! Ab cum culpa eum hic voluptate repellendus sapiente quaerat, asperiores ratione minus ipsum consectetur alias perferendis quia reiciendis? Officiis sunt, culpa repellendus nisi corrupti consequuntur. Officia aut animi totam. Inventore eos ipsam veniam sapiente magnam aliquam quaerat molestiae voluptas dicta. Nostrum libero, omnis officiis vero necessitatibus blanditiis facere beatae earum ad, quam nisi, consequatur assumenda laboriosam accusamus porro veritatis similique! -->
 </body>
 
 </html>
