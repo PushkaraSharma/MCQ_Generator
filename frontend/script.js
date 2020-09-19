@@ -42,7 +42,7 @@ $(document).ready(function () {
                                 <li>${response[i].options[1]}</li>
                                 <li>${response[i].options[2]}</li>
                                 <li>${response[i].options[3]}</li>
-                                ${temp.length > 0 ? `<li><select id="cars" name="cars"><option disabled selected>More Options..</option>${temp}</select></li>` : ''}
+                                ${temp.length > 0 ? `<li><select><option disabled selected>More Options..</option>${temp}</select></li>` : ''}
                                 <li>Answer: <span style="color: rgb(11, 206, 11); font-weight: bolder;">${response[i].answer}</span></li>
                             </ul>
                         </div>`)
@@ -55,7 +55,7 @@ $(document).ready(function () {
                                 <li>${response[i].options[0]}</li>
                                 <li>${response[i].options[1]}</li>
                                 <li>${response[i].options[2]}</li>
-                                ${temp.length > 0 ? `<li><select id="cars" name="cars"><option disabled selected>More Options..</option>${temp}</select></li>` : ''}
+                                ${temp.length > 0 ? `<li><select><option disabled selected>More Options..</option>${temp}</select></li>` : ''}
                                 <li>Answer: <span style="color: rgb(11, 206, 11); font-weight: bolder;">${response[i].answer}</span></li>
                             </ul>
                         </div>`)
