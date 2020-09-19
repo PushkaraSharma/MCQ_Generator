@@ -1,4 +1,4 @@
-from summarizer import Summarizer,TransformerSummarizer
+from summarizer import TransformerSummarizer
 
 def Summary(text):
     #model = Summarizer()

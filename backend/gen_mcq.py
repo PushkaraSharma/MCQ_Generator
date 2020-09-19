@@ -11,10 +11,11 @@ import json
 import re
 import random
 from pywsd.similarity import max_similarity
-from pywsd.lesk import adapted_lesk,simple_lesk,cosine_lesk
+from pywsd.lesk import adapted_lesk
 from nltk.corpus import wordnet 
 from find_sentances import extract_sentences
 import nltk
+import pandas as pd
 nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
 
@@ -109,6 +110,8 @@ def display(text,quantity):
             if len(distractors)>0:
                 options_for_mcq[keyword] = distractors
     
+    df = pd.DataFrame()
+    cols = ['question','options','extras','answer']
     
     index = 1
     print ("**********************************************************************************")
@@ -116,6 +119,7 @@ def display(text,quantity):
     print ("************************************************************************************\n\n")
     for i in options_for_mcq:
         sentence = filtered_sentences[i][0]
+        sentence = sentence.replace("\n",'')
         pattern = re.compile(i, re.IGNORECASE)
         output = pattern.sub( " ______ ", sentence)
         print ("%s)"%(index),output)
@@ -126,9 +130,11 @@ def display(text,quantity):
         for idx,choice in enumerate(top4):
             print ("\t",optionsno[idx],")"," ",choice)
         print ("\nMore options: ", options[4:8],"\n\n")
+        df = df.append(pd.DataFrame([[output,top4,options[4:8],i.capitalize()]],columns=cols))
         index = index + 1               
+    df.to_json('response.json',orient='records',force_ascii=False)
+    
 
-
-with open('article2.txt','r') as f:
-    text = f.read()
-display(text, quantity='high')
+# with open('article3.txt','r') as f:
+#     text = f.read()
+# display(text, quantity='high')
