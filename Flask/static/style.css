@@ -148,9 +148,19 @@ textarea{
 
 }
 
+.submit-bar{
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
 .submit{
-    width: 20%;
-    height: 10%;
+    width: 7rem;
+    height: 2rem;
     background-color: #0066FF;
     color: white;
     border: none;

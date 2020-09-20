@@ -1,6 +1,13 @@
 $(document).ready(function () {
+    loader = $('.loader')
     $('.submit').bind('click', function () {
+
         var paragraph = $(".textarea").val()
+        var num = $("input[name='high-low']:checked").val()
+        console.log('input : ', paragraph, num)
+
+        $(this).hide();
+        loader.show();
 
         if ((paragraph.split(" ")).length < 200) {
             alert(`Paragraph should me minimum 200 words!`)
@@ -8,18 +15,15 @@ $(document).ready(function () {
         else {
 
             $.ajax({
-                url: "test1", //the page containing python script
-                type: "post", //request type,
-                data: paragraph,
-                contentType: false,
+                url: "/result/", //the page containing python script
+                type: "POST", //request type,
+                data: { 'paragraph': paragraph, 'num': num }, //num - 1 for high, 0 for low, to change toggle value in template>index.html
                 cache: false,
-                processData: false,
                 async: true,
 
                 success: function (response) {
-
-                    $('.submit').hide();
-                    $('.loader').show();
+                    response = JSON.parse(response)
+                    console.log('response recieved', response)
                     $('.output').empty();
                     $('.output').append('<div class="header oSub"><p>Questions</p></div>');
                     $('.output').show();
@@ -42,7 +46,7 @@ $(document).ready(function () {
                                 <li>${response[i].options[1]}</li>
                                 <li>${response[i].options[2]}</li>
                                 <li>${response[i].options[3]}</li>
-                                ${temp.length > 0 ? `<li><select><option disabled selected>More Options..</option>${temp}</select></li>` : ''}
+                                ${temp.length > 0 ? `<li><select id="cars" name="cars"><option disabled selected>More Options..</option>${temp}</select></li>` : ''}
                                 <li>Answer: <span style="color: rgb(11, 206, 11); font-weight: bolder;">${response[i].answer}</span></li>
                             </ul>
                         </div>`)
@@ -55,17 +59,17 @@ $(document).ready(function () {
                                 <li>${response[i].options[0]}</li>
                                 <li>${response[i].options[1]}</li>
                                 <li>${response[i].options[2]}</li>
-                                ${temp.length > 0 ? `<li><select><option disabled selected>More Options..</option>${temp}</select></li>` : ''}
+                                ${temp.length > 0 ? `<li><select id="cars" name="cars"><option disabled selected>More Options..</option>${temp}</select></li>` : ''}
                                 <li>Answer: <span style="color: rgb(11, 206, 11); font-weight: bolder;">${response[i].answer}</span></li>
                             </ul>
                         </div>`)
                         }
                     }
-                    $('.submit').show();
-                    $('.loader').hide();
                     $(document).scrollTop($(document).height());
                 }
             })
         }
+        $(this).show();
+        loader.hide();
     })
 });
