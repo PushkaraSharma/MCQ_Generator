@@ -22,7 +22,7 @@ $(document).ready(function () {
                 async: true,
 
                 success: function (response) {
-                    response = JSON.parse(response)
+                    //response = JSON.parse(response)
                     console.log('response recieved', response)
                     $('.output').empty();
                     $('.output').append('<div class="header oSub"><p>Questions</p></div>');

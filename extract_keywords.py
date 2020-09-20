@@ -29,7 +29,9 @@ def final_keywords(text,quantity):
     
     keywords_from_fulltext = extracting_keywords(text)
    # print("Keywords from full text :",keywords_from_fulltext)
-    if(quantity=='low'):
+    print("Quantity:",quantity)
+    if(quantity=='0'):
+        print("SUMMAARYYYY")
         generated_summary = Summary(text)
         filtered_keywords = []
         for i in keywords_from_fulltext:
