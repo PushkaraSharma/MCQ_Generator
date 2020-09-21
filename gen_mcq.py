@@ -7,7 +7,6 @@ Created on Thu Sep 17 18:01:28 2020
 """
 
 import requests
-import json
 import re
 import random
 from pywsd.similarity import max_similarity
@@ -18,9 +17,12 @@ import nltk
 import pandas as pd
 nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
+nltk.download('punkt')
+nltk.download('stopwords')
 
 
 def wordnet_distractors(syon,word):
+    print("6.Obtaining relative options from Wordnet...")
     distractors = []
     word = word.lower()
     ori_word = word
@@ -45,6 +47,7 @@ def wordnet_distractors(syon,word):
 
 
 def conceptnet_distractors(word):
+    print("6.Obtaining relative options from ConceptNet...")
     word = word.lower()
     orig_word= word
     if (len(word.split())>0):
@@ -66,14 +69,15 @@ def conceptnet_distractors(word):
     return distractor_list
 
 def word_sense(sentence,keyword):
+    print("5.Getting word sense to obtain best MCQ options with WordNet...")
     word = keyword.lower()
     #print(keyword)
     if len(word.split())>0:
         word = word.replace(" ","_")
     
     syon_sets = wordnet.synsets(word,'n')
-    print(keyword)
-    print(syon_sets)
+    #print(keyword)
+    #print(syon_sets)
     if syon_sets:
         try:
             wup = max_similarity(sentence, word, 'wup', pos='n')
@@ -94,7 +98,6 @@ def display(text,quantity):
     
     options_for_mcq = {}
     for keyword in filtered_sentences:
-        print(keyword)
         wordsense = word_sense(filtered_sentences[keyword][0],keyword)
         if wordsense:
            distractors = wordnet_distractors(wordsense,keyword) 
@@ -109,7 +112,7 @@ def display(text,quantity):
             distractors = conceptnet_distractors(keyword)
             if len(distractors)>0:
                 options_for_mcq[keyword] = distractors
-    
+    print("7. Creating JSON response for API...")
     df = pd.DataFrame()
     cols = ['question','options','extras','answer']
     

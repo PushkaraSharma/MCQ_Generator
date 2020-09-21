@@ -1,13 +1,11 @@
 from nltk.tokenize import sent_tokenize
 from flashtext import KeywordProcessor 
-# import nltk
-# nltk.download('punkt')
-# nltk.download('stopwords')
 from extract_keywords import final_keywords
 
 
 
 def set_sentances(text):
+    print("3.Selecting Sentences based on keywords...")
     sentences = [sent_tokenize(text)]
     # nested list to single list
     sentences = [i for sent in sentences for i in sent]
@@ -28,10 +26,10 @@ def extract_sentences(text,quantity):
         filtered_sentences[i]=[]
         key_processor.add_keyword(i)
         
-    #calling fn to set sentences fro summary text
+    #calling fn to set sentences from summary text
     sentences = set_sentances(text)
-    
-    #extracting sentences with given keyowords and add to dict keys
+    print("4.Filtering sentences...")
+    #extracting sentences with given keywords and add to dict keys
     for sent in sentences:
         keyword_searched = key_processor.extract_keywords(sent)
         for key in keyword_searched:

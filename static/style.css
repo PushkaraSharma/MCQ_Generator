@@ -13,12 +13,13 @@ body{
     height: 100vh;
     font-family: roboto;
     font-size: 18px;
+  
 }
 
 .top{
     background-color: #0066ff18;
     margin: 1vh 2vh;
-    height: 50%;
+    height: 40%;
     border-radius: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -36,8 +37,10 @@ body{
 
 .header{
     background-color: #00A8F3;
+    margin-top: 3%; 
     width: 25%;
     height: 18%;
+    padding: 10px;
     border-radius: 20px;
     font-weight: bolder;
     color: white;
@@ -87,6 +90,7 @@ body{
 
 .svg-text img{
     margin-bottom: 1rem;
+     height: 55%;
 }
 
 .arrow{
@@ -135,8 +139,10 @@ body{
 }
 
 .sub{
-    width: 35%;
+    width: 25%;
     margin-bottom: 2%;
+    padding: 0px;
+    font-size: 18px;
 }
 
 textarea{
@@ -265,9 +271,10 @@ textarea{
 }
 
 footer{
+    
     font-size: 0.9rem;
     width: 100%;
     height: 2%;
     text-align: center;
-    bottom: 0;
+    bottom: 10px;
 }
