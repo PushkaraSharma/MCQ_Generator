@@ -8,7 +8,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 COPY . /app
-RUN apt update && apt upgrade -y && apt install -y python python3 python-pip p$
+RUN apt update && apt upgrade -y && apt install -y python python3 python-pip python3-pip  
 RUN apt-get install -y git
 RUN pip3 install --upgrade pip
 RUN pip3 --no-cache-dir install --default-timeout=100 -r /app/requirements.txt
