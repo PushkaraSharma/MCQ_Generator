@@ -67,7 +67,7 @@ __Note:-__ It may download some of the required data on first run.
 To run Docker Image make sure you have installed Docker in your system. If you haven't installed follow [this](https://docs.docker.com/engine/install/).
 Use this command to pull image.
 ```bash
-docker pull pushkarasharma11/mcq_generator
+docker pull pushkarasharma11/mcq_generator:1.1
 ```
 
 ## Directory Tree 
