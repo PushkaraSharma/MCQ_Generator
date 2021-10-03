@@ -33,6 +33,7 @@ body{
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+        min-height: 350px;
 }
 
 .header{
@@ -279,6 +280,9 @@ footer{
     height: 2%;
     text-align: center;
     bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .high-low {
